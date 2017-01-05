@@ -2,6 +2,37 @@ from django.db import models
 from django.utils import timezone
 
 
+
+class Course(models.Model):
+    name = models.CharField(max_length=70)
+    course_id = models.CharField(max_length=10, default="")
+    major = models.CharField(
+        max_length=45,
+        choices= (
+        ('bachelorcollege', 'Bachelor College'),
+        ('appliedmathematics', 'Applied Mathematics'),
+        ('appliedphysics', 'Applied Physics'),
+        ('architecture', 'Architecture, Urbanism and Building Sciences'),
+        ('automotive', 'Automotive'),
+        ('biomedicalengineering', 'Biomedical Engineering'),
+        ('chemicalengineering', 'Chemical Engineering'),
+        ('computerscience', 'Computer Science'),
+        ('electricalengineering', 'Electrical Engineering'),
+        ('industrialdesign', 'Industrial Design'),
+        ('industrialengineering', 'Industrial Engineering'),
+        ('mechanicalengineering', 'Mechanical Engineering'),
+        ('psychologyandtechnology', 'Psychology and Technology'),
+        ('sustainableinnovation', 'Sustainable Innovation'),
+        ),
+        default='computerscience',
+        )
+    def __str__(self):
+        return self.name
+
+    def __major__(self):
+        return self.major
+
+
 class Resource(models.Model):
     uploadedBy = models.ForeignKey('auth.User')
     title = models.CharField(max_length=200)
@@ -22,19 +53,20 @@ class Resource(models.Model):
         ('industrialengineering', 'Industrial Engineering'),
         ('mechanicalengineering', 'Mechanical Engineering'),
         ('psychologyandtechnology', 'Psychology and Technology'),
-        ('sustainableinnovations', 'Sustaibable Innovation'),
+        ('sustainableinnovation', 'Sustainable Innovation'),
         ),
-        default='bachelorcollege',
+        #default='computerscience',
         )
-    course = models.CharField(max_length=70, default="")
+    #mjr = getattr('Resource', major)
+    #courses = models.ForeignKey(Course, on_delete=models.CASCADE, limit_choices_to={'major': mjr})
+    course = models.ForeignKey(Course)
     resourcetype = models.CharField(
         max_length=45,
         choices= (
-        ('summary', 'Summary'),
-        ('practiceexam', 'Practice Exam'),
-        ('oldexam', 'Old Exam'),
+        ('Summary', 'Summary'),
+        ('Exam', 'Exam'),
         ),
-        default='summary',
+        default='Summary',
         )
     upload_date = models.DateTimeField(
             blank=True, null=True)

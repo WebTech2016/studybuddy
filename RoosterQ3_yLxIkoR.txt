@@ -1,0 +1,16 @@
+Q3:
+
+- Marketing by Design -- Tijdslot A
+  Maandagochtend 8:45-10:30 Lecture
+
+- Programming Methods -- Tijdslot D
+  Woensdagmiddag 13:45-15:30 Instructie
+                 15:45-17:30 Lecture
+  Vrijdagochtend 8:45-10:30 Practicum
+                 10:45-12:30 Lecture
+
+- Software Specification -- Tijdslot E
+  Dinsdagmiddag 13:45-15:30 Lecture
+                15:45-17:30 Instructie
+  Donderdagochtend 8:45-10:30 OGO (Instructie/groepwerk?)
+                   10:45-12:30 Lecture
