@@ -50,13 +50,13 @@
                         <td>{{ form.title.label_tag }}</td>
                         <td>{{ form.title }}</td>
                     </tr>
-                    <tr>
+                    <!--<tr>
                         <td>{{ form.major.label_tag }}</td>
-                        <td>{{ form.major }}</td>
-                    </tr>
+                        <td id="majorcs" >{{ form.major }}</td>
+                    </tr>-->
                     <tr>
                         <td>{{ form.course.label_tag }}</td>
-                        <td>{{ form.course }}</td>
+                        <td id="coursejs">{{ form.course }}</td>
                         <td>
                           <button type="button" onclick="window.document.location='{% url "addcourse" %}'"}>Add Course</button>
                         </td>
@@ -72,9 +72,7 @@
                 </table>
                 <button type="submit" class="save btn btn-blog pull-right">SAVE</button>
             </form>
-            <!-- <form method="POST" class="post-form">{% csrf_token %} {{ form.as_p}}
-                <button type="submit" class="save btn btn-blog pull-right">SAVE</button>
-            </form> -->
+
         </div>
     </div>
 
@@ -86,6 +84,5 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="{% static 'js/myjs.js' %}"></script>
-
 </body>
 {% endblock %}

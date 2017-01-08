@@ -4,9 +4,14 @@ from .models import Resource, Course
 
 class UploadForm(forms.ModelForm):
 
+    def __init__(self, *args, **kwargs):
+        super(UploadForm, self).__init__(*args, **kwargs)   
+        self.fields['course'].queryset = Course.objects.order_by('name')
+
     class Meta:
         model = Resource
-        fields = ('title', 'major', 'course', 'resourcetype', 'resourcefile')
+        # major hier tussen zetten wanneer filteren werkt
+        fields = ('title', 'course', 'resourcetype', 'resourcefile')
 
 
 class AddCourseForm(forms.ModelForm):

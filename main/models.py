@@ -70,6 +70,8 @@ class Resource(models.Model):
         )
     upload_date = models.DateTimeField(
             blank=True, null=True)
+    class Meta:
+        ordering = ['course']
 
     def __str__(self):
         return self.title
