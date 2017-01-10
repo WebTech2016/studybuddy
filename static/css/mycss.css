@@ -1,3 +1,111 @@
+/* Alain */
+.SearchBarMain {
+    width: 500px;
+    height: 100px;
+    background-image: url("https://c1.staticflickr.com/9/8754/16840395246_a2841b0f4e_b.jpg");
+    background-size: cover;
+    background-position: center;
+
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+}
+
+.btn-main{
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  margin: auto;
+
+  height: 30px;
+}
+
+.footer {
+    position:absolute;
+    bottom:0px;
+    width: 100%;
+    margin: 0;
+    background-color: #000;
+    height: 40px;/* or however high you would like */
+}
+
+.picture1 {
+   padding-left: 100px;
+   padding-top: 5px;
+}
+
+/*place background images*/
+.service-box1{
+  background-image: url("https://assets.entrepreneur.com/content/3x2/1300/1410376858-experts-agree-great-entrepreneurs-keep-good-company.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  width: 200px;
+
+}
+.service-box2{
+  background-image: url("http://d.stockcharts.com/img/articles/2015/10/1443714241523351659578.png");
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  width: 200px;
+}
+
+.service-box3{
+  background-image: url("https://www.toprankers.com/exams/wp-content/uploads/2015/12/exam.png");
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  width: 200px;
+}
+
+.service-box4{
+  background-image: url("https://www.asme.org/getmedia/c2c8ea5a-b690-4ba7-92bb-34bd1432862b/book_guide_hero_books.aspx");
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  width: 200px;
+}
+
+h3, label{
+  color: white;
+  background-color: rgba(255, 150, 0, 0.9);
+}
+
+.navbar-default{
+  background-image: url("http://blogs.yis.ac.jp/21boweringk/files/2015/11/cropped-html-color-codes-color-tutorials-hero-00e10b1f-25giert.jpg");
+}
+
+h4, th, td{
+  color: orange;
+  font-family: 'lobster', cursive;
+}
+
+h1{
+  	font-family: Courier;
+    color: red;
+}
+
+.container-course{
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Blue_globe_banner.svg/2000px-Blue_globe_banner.svg.png");
+  background-size: cover;
+  background-position: center;
+}
+
+h4{
+  background-image: url("http://www.bobbuskirk.com/images/twitterbg1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+/*Alain end*/
+
 p, ul, li, div, nav {
     padding: 0;
     margin: 0;

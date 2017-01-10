@@ -8,4 +8,5 @@ urlpatterns = [
     url(r'^course/(?P<pk>\d+)/$', views.course, name='course'),
     url(r'^upload/', views.upload, name='upload'),
     url(r'^addcourse/', views.addcourse, name='addcourse'),
+    url(r'^search/$', views.search),
     ]

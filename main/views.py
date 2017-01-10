@@ -6,6 +6,8 @@ from django.shortcuts import redirect
 import os
 from django.conf import settings
 from django.http import HttpResponse
+from django.template import Context
+from django.template.loader import get_template
 
 def index(request):
     resources = Resource.objects.all()
@@ -71,3 +73,10 @@ def download(request, path):
             return response
     else:
         raise Http404
+
+def search(request):
+    query = request.GET['q']
+    results = Course.objects.filter(name__contains=query)
+    temp = get_template('main/searchresults.html')
+    context = Context({'results': results, 'query': query})
+    return HttpResponse(temp.render(context))
