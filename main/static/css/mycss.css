@@ -1,3 +1,34 @@
+/* Alain */
+.SearchBarMain {
+    width: 500px;
+    height: 100px;
+    background-image: url("https://c1.staticflickr.com/9/8754/16840395246_a2841b0f4e_b.jpg");
+    background-size: cover;
+    background-position: center;
+
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+}
+
+.btn-main{
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  margin: auto;
+
+  height: 30px;
+}
+
+/*Alain end*/
+
 p, ul, li, div, nav {
     padding: 0;
     margin: 0;
