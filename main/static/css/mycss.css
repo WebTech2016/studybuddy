@@ -27,6 +27,46 @@
   height: 30px;
 }
 
+.footer {
+    position:absolute;
+    bottom:0px;
+    width: 100%;
+    margin: 0;
+    background-color: #000;
+    height: 40px;/* or however high you would like */
+}
+
+.picture1 {
+   padding-left: 100px;
+   padding-top: 5px;
+}
+
+/*place background images*/
+.service-box1{
+  background-image: url("https://assets.entrepreneur.com/content/3x2/1300/1410376858-experts-agree-great-entrepreneurs-keep-good-company.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+}
+.service-box2{
+  background-image: url("http://d.stockcharts.com/img/articles/2015/10/1443714241523351659578.png");
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+}
+.service-box3{
+  background-image: url("https://www.toprankers.com/exams/wp-content/uploads/2015/12/exam.png");
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+}
+.service-box4{
+  background-image: url("https://www.asme.org/getmedia/c2c8ea5a-b690-4ba7-92bb-34bd1432862b/book_guide_hero_books.aspx");
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+}
+
 /*Alain end*/
 
 p, ul, li, div, nav {
