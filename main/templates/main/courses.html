@@ -2,10 +2,12 @@
 
 <body>
 
-    <div class="container">
-        <div class="header">
-            <nav class="navbar navbar-default">
-                <div class="container-fluid">
+    <!-- header-->
+        <div class="container-fullwidth">
+            <div class="header">
+                <div class="container">
+                    <nav id="navid" class="navbar navbar-default">
+                        <div class="container-fluid">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -33,13 +35,13 @@
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="{% url "upload" %}">Upload</a></li>
                         </ul>
-                    </div>
-                    <!-- /.navbar-collapse -->
-                </div>
-                <!-- /.container-fluid -->
-            </nav>
-        </div>
-    </div>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav><!-- navbar-default -->
+        </div><!-- container-->
+    </div><!-- header-->
+</div><!-- container-fullwidth -->
+
 
 <!--
     <div class="container" id="container">
@@ -449,6 +451,15 @@
     {% endif %}
 </div>
 
+
+<div class='container-fullwidth' id="footer">
+    <div class="container">
+        <p>&copy; copyright 2016
+            <a href="https://www.facebook.com/"><img height="20px" width="20px" src="https://www.facebook.com/images/fb_icon_325x325.png" /></a>
+            <a href="https://twitter.com/?lang=nl"><img height="20px" width="20px" src="https://g.twimg.com/ios_homescreen_icon.png" /></a>
+        </p>
+    </div><!-- container -->
+</div><!-- footer -->
 
 
             <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
