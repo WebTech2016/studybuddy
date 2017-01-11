@@ -155,300 +155,302 @@
 
 
 <div class="container">
-  {% if bachelorcollege%}
-    <div class="row">
-        <h4><b>Bachelor College</b></h4>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Course</th>
-                    <th>Course ID</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for course in bachelorcollege%}
-                <tr onclick="window.document.location='{% url 'course' pk=course.pk %}'">
-                    <th scope="row">{{course.name}}</th>
-                    <td>{{course.course_id}}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
-    {% endif %}
-    {% if appliedmathematics%}
-    <div class="row">
-        <h4><b>Applied Mathematics</b></h4>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Course</th>
-                    <th>Course ID</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for course in appliedmathematics%}
-                <tr onclick="window.document.location='{% url 'course' pk=course.pk %}'">
-                    <th scope="row">{{course.name}}</th>
-                    <td>{{course.course_id}}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
-    {% endif %}
-    {% if appliedphysics%}
-    <div class="row">
-        <h4><b>Applied Physics</b></h4>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Course</th>
-                    <th>Course ID</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for course in appliedphysics%}
-                <tr onclick="window.document.location='{% url 'course' pk=course.pk %}'">
-                    <th scope="row">{{course.name}}</th>
-                    <td>{{course.course_id}}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
-    {% endif %}
-    {% if architecture%}
-    <div class="row">
-        <h4><b>Architecture</b></h4>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Course</th>
-                    <th>Course ID</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for course in architecture%}
-                <tr onclick="window.document.location='{% url 'course' pk=course.pk %}'">
-                    <th scope="row">{{course.name}}</th>
-                    <td>{{course.course_id}}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
-    {% endif %}
-    {% if automotive%}
-    <div class="row">
-        <h4><b>Automotive</b></h4>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Course</th>
-                    <th>Course ID</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for course in automotive%}
-                <tr onclick="window.document.location='{% url 'course' pk=course.pk %}'">
-                    <th scope="row">{{course.name}}</th>
-                    <td>{{course.course_id}}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
-    {% endif %}
-    {% if biomedicalengineering%}
-    <div class="row">
-        <h4><b>Biomedical Engineering</b></h4>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Course</th>
-                    <th>Course ID</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for course in biomedicalengineering%}
-                <tr onclick="window.document.location='{% url 'course' pk=course.pk %}'">
-                    <th scope="row">{{course.name}}</th>
-                    <td>{{course.course_id}}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
-    {% endif %}
-    {% if chemicalengineering%}
-    <div class="row">
-        <h4><b>Chemical Engineering</b></h4>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Course</th>
-                    <th>Course ID</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for course in chemicalengineering%}
-                <tr onclick="window.document.location='{% url 'course' pk=course.pk %}'">
-                    <th scope="row">{{course.name}}</th>
-                    <td>{{course.course_id}}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
-    {% endif %}
-    {% if computerscience%}
-    <div class="row">
-        <h4><b>Computer Science</b></h4>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Course</th>
-                    <th>Course ID</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for course in computerscience%}
-                <tr onclick="window.document.location='{% url 'course' pk=course.pk %}'">
-                    <th scope="row">{{course.name}}</th>
-                    <td>{{course.course_id}}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
-    {% endif %}
-    {% if electricalengineering%}
-    <div class="row">
-        <h4><b>Electrical Engineering</b></h4>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Course</th>
-                    <th>Course ID</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for course in electricalengineering%}
-                <tr onclick="window.document.location='{% url 'course' pk=course.pk %}'">
-                    <th scope="row">{{course.name}}</th>
-                    <td>{{course.course_id}}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
-    {% endif %}
-    {% if industrialdesign%}
-    <div class="row">
-        <h4><b>Industrial Design</b></h4>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Course</th>
-                    <th>Course ID</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for course in industrialdesign%}
-                <tr onclick="window.document.location='{% url 'course' pk=course.pk %}'">
-                    <th scope="row">{{course.name}}</th>
-                    <td>{{course.course_id}}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
-    {% endif %}
-    {% if industrialengineering%}
-    <div class="row">
-        <h4><b>Industrial Engineering</b></h4>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Course</th>
-                    <th>Course ID</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for course in industrialengineering%}
-                <tr onclick="window.document.location='{% url 'course' pk=course.pk %}'">
-                    <th scope="row">{{course.name}}</th>
-                    <td>{{course.course_id}}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
-    {% endif %}
-    {% if mechanicalengineering%}
-    <div class="row">
-        <h4><b>Mechanical Engineering</b></h4>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Course</th>
-                    <th>Course ID</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for course in mechanicalengineering%}
-                <tr onclick="window.document.location='{% url 'course' pk=course.pk %}'">
-                    <th scope="row">{{course.name}}</th>
-                    <td>{{course.course_id}}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
-    {% endif %}
-    {% if psychologyandtechnology%}
-    <div class="row">
-        <h4><b>Psychology and Technology</b></h4>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Course</th>
-                    <th>Course ID</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for course in psychologyandtechnology%}
-                <tr onclick="window.document.location='{% url 'course' pk=course.pk %}'">
-                    <th scope="row">{{course.name}}</th>
-                    <td>{{course.course_id}}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
-    {% endif %}
-    {% if sustainableinnovation%}
-    <div class="row">
-        <h4><b>Sustainable Innovation</b></h4>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Course</th>
-                    <th>Course ID</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for course in sustainableinnovation%}
-                <tr onclick="window.document.location='{% url 'course' pk=course.pk %}'">
-                    <th scope="row">{{course.name}}</th>
-                    <td>{{course.course_id}}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
-    {% endif %}
+    <div id="actable">
+      {% if bachelorcollege%}
+        <div class="row">
+            <div class="actablewrap"><h4><b>Bachelor College</b></h4>
+            <div class="actableheight"><table class="table">
+                <thead>
+                    <tr>
+                        <th>Course</th>
+                        <th>Course ID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for course in bachelorcollege%}
+                    <tr onclick="window.document.location='{% url 'course' pk=course.pk %}'">
+                        <th scope="row">{{course.name}}</th>
+                        <td>{{course.course_id}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table></div></div>
+        </div>
+        {% endif %}
+        {% if appliedmathematics%}
+        <div class="row">
+            <div class="actablewrap"><h4><b>Applied Mathematics</b></h4>
+            <div class="actableheight"><table class="table">
+                <thead>
+                    <tr>
+                        <th>Course</th>
+                        <th>Course ID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for course in appliedmathematics%}
+                    <tr onclick="window.document.location='{% url 'course' pk=course.pk %}'">
+                        <th scope="row">{{course.name}}</th>
+                        <td>{{course.course_id}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table></div></div>
+        </div>
+        {% endif %}
+        {% if appliedphysics%}
+        <div class="row">
+            <div class="actablewrap"><h4><b>Applied Physics</b></h4>
+            <div class="actableheight"><table class="table">
+                <thead>
+                    <tr>
+                        <th>Course</th>
+                        <th>Course ID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for course in appliedphysics%}
+                    <tr onclick="window.document.location='{% url 'course' pk=course.pk %}'">
+                        <th scope="row">{{course.name}}</th>
+                        <td>{{course.course_id}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table></div></div>
+        </div>
+        {% endif %}
+        {% if architecture%}
+        <div class="row">
+            <div class="actablewrap"><h4><b>Architecture</b></h4>
+            <div class="actableheight"><table class="table">
+                <thead>
+                    <tr>
+                        <th>Course</th>
+                        <th>Course ID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for course in architecture%}
+                    <tr onclick="window.document.location='{% url 'course' pk=course.pk %}'">
+                        <th scope="row">{{course.name}}</th>
+                        <td>{{course.course_id}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table></div></div>
+        </div>
+        {% endif %}
+        {% if automotive%}
+        <div class="row">
+            <div class="actablewrap"><h4><b>Automotive</b></h4>
+            <div class="actableheight"><table class="table">
+                <thead>
+                    <tr>
+                        <th>Course</th>
+                        <th>Course ID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for course in automotive%}
+                    <tr onclick="window.document.location='{% url 'course' pk=course.pk %}'">
+                        <th scope="row">{{course.name}}</th>
+                        <td>{{course.course_id}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table></div></div>
+        </div>
+        {% endif %}
+        {% if biomedicalengineering%}
+        <div class="row">
+            <div class="actablewrap"><h4><b>Biomedical Engineering</b></h4>
+            <div class="actableheight"><table class="table">
+                <thead>
+                    <tr>
+                        <th>Course</th>
+                        <th>Course ID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for course in biomedicalengineering%}
+                    <tr onclick="window.document.location='{% url 'course' pk=course.pk %}'">
+                        <th scope="row">{{course.name}}</th>
+                        <td>{{course.course_id}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table></div></div>
+        </div>
+        {% endif %}
+        {% if chemicalengineering%}
+        <div class="row">
+            <div class="actablewrap"><h4><b>Chemical Engineering</b></h4>
+            <div class="actableheight"><table class="table">
+                <thead>
+                    <tr>
+                        <th>Course</th>
+                        <th>Course ID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for course in chemicalengineering%}
+                    <tr onclick="window.document.location='{% url 'course' pk=course.pk %}'">
+                        <th scope="row">{{course.name}}</th>
+                        <td>{{course.course_id}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table></div></div>
+        </div>
+        {% endif %}
+        {% if computerscience%}
+        <div class="row">
+            <div class="actablewrap"><h4><b>Computer Science</b></h4>
+            <div class="actableheight"><table class="table">
+                <thead>
+                    <tr>
+                        <th>Course</th>
+                        <th>Course ID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for course in computerscience%}
+                    <tr onclick="window.document.location='{% url 'course' pk=course.pk %}'">
+                        <th scope="row">{{course.name}}</th>
+                        <td>{{course.course_id}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table></div></div>
+        </div>
+        {% endif %}
+        {% if electricalengineering%}
+        <div class="row">
+            <div class="actablewrap"><h4><b>Electrical Engineering</b></h4>
+            <div class="actableheight"><table class="table">
+                <thead>
+                    <tr>
+                        <th>Course</th>
+                        <th>Course ID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for course in electricalengineering%}
+                    <tr onclick="window.document.location='{% url 'course' pk=course.pk %}'">
+                        <th scope="row">{{course.name}}</th>
+                        <td>{{course.course_id}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table></div></div>
+        </div>
+        {% endif %}
+        {% if industrialdesign%}
+        <div class="row">
+            <div class="actablewrap"><h4><b>Industrial Design</b></h4>
+            <div class="actableheight"><table class="table">
+                <thead>
+                    <tr>
+                        <th>Course</th>
+                        <th>Course ID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for course in industrialdesign%}
+                    <tr onclick="window.document.location='{% url 'course' pk=course.pk %}'">
+                        <th scope="row">{{course.name}}</th>
+                        <td>{{course.course_id}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table></div></div>
+        </div>
+        {% endif %}
+        {% if industrialengineering%}
+        <div class="row">
+            <div class="actablewrap"><h4><b>Industrial Engineering</b></h4>
+            <div class="actableheight"><table class="table">
+                <thead>
+                    <tr>
+                        <th>Course</th>
+                        <th>Course ID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for course in industrialengineering%}
+                    <tr onclick="window.document.location='{% url 'course' pk=course.pk %}'">
+                        <th scope="row">{{course.name}}</th>
+                        <td>{{course.course_id}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table></div></div>
+        </div>
+        {% endif %}
+        {% if mechanicalengineering%}
+        <div class="row">
+            <div class="actablewrap"><h4><b>Mechanical Engineering</b></h4>
+            <div class="actableheight"><table class="table">
+                <thead>
+                    <tr>
+                        <th>Course</th>
+                        <th>Course ID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for course in mechanicalengineering%}
+                    <tr onclick="window.document.location='{% url 'course' pk=course.pk %}'">
+                        <th scope="row">{{course.name}}</th>
+                        <td>{{course.course_id}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table></div></div>
+        </div>
+        {% endif %}
+        {% if psychologyandtechnology%}
+        <div class="row">
+            <div class="actablewrap"><h4><b>Psychology and Technology</b></h4>
+            <div class="actableheight"><table class="table">
+                <thead>
+                    <tr>
+                        <th>Course</th>
+                        <th>Course ID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for course in psychologyandtechnology%}
+                    <tr onclick="window.document.location='{% url 'course' pk=course.pk %}'">
+                        <th scope="row">{{course.name}}</th>
+                        <td>{{course.course_id}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table></div></div>
+        </div>
+        {% endif %}
+        {% if sustainableinnovation%}
+        <div class="row">
+            <div class="actablewrap"><h4><b>Sustainable Innovation</b></h4>
+            <div class="actableheight"><table class="table">
+                <thead>
+                    <tr>
+                        <th>Course</th>
+                        <th>Course ID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for course in sustainableinnovation%}
+                    <tr onclick="window.document.location='{% url 'course' pk=course.pk %}'">
+                        <th scope="row">{{course.name}}</th>
+                        <td>{{course.course_id}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table></div></div>
+        </div>
+        {% endif %}
+    </div><!-- actable -->
 </div>
 
 

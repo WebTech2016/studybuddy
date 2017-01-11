@@ -16,6 +16,33 @@ body, html {
     text-align: center;
 }
 
+
+
+
+
+.header {
+  background-image: url("http://blogs.yis.ac.jp/21boweringk/files/2015/11/cropped-html-color-codes-color-tutorials-hero-00e10b1f-25giert.jpg");
+  background-size: cover;
+}
+
+.navbar-default {
+  background: none;
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-shadow: none;
+  color: #FFF;
+}
+
+#navid .active a {
+  background: rgba(255,255,255,0.4);
+  text-shadow: 1px 1px rgba(0,0,0,0.4);
+}
+
+#navid a {
+  color: #FFF;
+}
+
 #picture1 {
     width: 80%;
     height: auto;
@@ -81,6 +108,34 @@ body, html {
     padding: 20px 0;
 }
 
+
+
+
+/* courses accordion menu table */
+
+#actable {
+    width: 100%;
+    padding: 50px 0;
+}
+
+#actable h4 {
+    color: #FFF;
+    padding: 15px 5px;
+    background: #888;
+}
+
+#actable .actableheight {
+    height: 0px;
+    overflow: hidden;
+    transition: .5s;
+}
+
+#actable .actablewrap.active .actableheight{
+    height: auto;
+}
+
+
+
 /* Alain */
 .SearchBarMain {
     /*width: 500px;
@@ -138,51 +193,12 @@ h3 {
 }
 
 
-
-.header {
-  background-image: url("http://blogs.yis.ac.jp/21boweringk/files/2015/11/cropped-html-color-codes-color-tutorials-hero-00e10b1f-25giert.jpg");
-  background-size: cover;
-}
-
-.navbar-default {
-  background: none;
-  padding: 0;
-  margin: 0;
-  border: none;
-  box-shadow: none;
-  color: #FFF;
-}
-
-#navid .active a {
-  background: rgba(255,255,255,0.4);
-  text-shadow: 1px 1px rgba(0,0,0,0.4);
-}
-
-#navid a {
-  color: #FFF;
-}
-
-h4, th, td{
-  color: orange;
-  font-family: 'lobster', cursive;
-}
-
-h1{
-  	font-family: Courier;
-    color: red;
-}
-
 .container-course{
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Blue_globe_banner.svg/2000px-Blue_globe_banner.svg.png");
   background-size: cover;
   background-position: center;
 }
 
-h4{
-  background-image: url("http://www.bobbuskirk.com/images/twitterbg1.jpg");
-  background-size: cover;
-  background-position: center;
-}
 /*Alain end*/
 
 p, ul, li, div, nav {

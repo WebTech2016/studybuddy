@@ -1,5 +1,16 @@
 $(function() {
-  $(function(){
+
+    //accordion menu courses
+    if ( $(".actableheight").length ) {
+
+        $("h4").click( function() {
+            $(this).parent().toggleClass('active');
+        });
+
+    }
+
+
+
       $("#majorjs").change(function(){
         $.getJSON("/items/",{id: $(this).val(), view: 'json'}, function(j) {
           var options = '<option value="">--------&nbsp;</option>';
@@ -11,5 +22,5 @@ $(function() {
         })
         $("#coursejs").attr('selected', 'selected');
       })
-    })
+
 });
