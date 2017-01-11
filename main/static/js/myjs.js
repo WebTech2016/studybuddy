@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
   $(function(){
       $("#majorjs").change(function(){
         $.getJSON("/items/",{id: $(this).val(), view: 'json'}, function(j) {
