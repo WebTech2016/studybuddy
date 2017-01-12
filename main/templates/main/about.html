@@ -22,8 +22,8 @@
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav">
-                                <li class="active"><a href="{% url "index" %}">Home <span class="sr-only">(current)</span></a></li>
-                                <li><a href="{% url "about"%}">About</a></li>
+                                <li><a href="{% url "index" %}">Home <span class="sr-only">(current)</span></a></li>
+                                <li class="active"><a href="{% url "about"%}">About</a></li>
                                 <li><a href="{% url "courses"%}">Courses</a></li>
                             </ul>
                             <ul class="nav navbar-nav navbar-right">
@@ -40,36 +40,8 @@
     <!-- content -->
     <div class="container">
 
-        <img id="picture1" src="http://mijnstudybuddy.nl/wp-content/uploads/2015/05/logo-horizontaal.png" alt="main-image">
+        <h1>About StuddyBuddy</h1>
 
-        <form id="searchbarform">
-            <div id="searchbargroup" class="form-group">
-                <input type="text" class="form-control" placeholder="Search">
-                <input type="submit" class="btn btn-default btn-main" id="searchbarbutton" value="Search!">
-            </div><!-- form-group -->
-            <label><input type="checkbox" name="checkbox" value="value" checked>Vul iets in</label>
-            <label><input type="checkbox" name="checkbox" value="value" checked>Vul iets in</label>
-            <label><input type="checkbox" name="checkbox" value="value" checked>Vul iets in</label>
-        </form>
-
-
-    <div class="row pad-top">
-
-        <h1 class="center">You're in good company!</h1>
-
-        <div class="col-xs-4 iconstuff">
-            <img src="{% static 'img/courses.svg' %}" />
-            <h2>69 Courses</h2>
-        </div>
-        <div class="col-xs-4 iconstuff">
-            <img src="{% static 'img/summaries.svg' %}" />
-            <h2>123 Summaries</h2>
-        </div>
-        <div class="col-xs-4 iconstuff">
-            <img src="{% static 'img/exams.svg' %}" />
-            <h2>130 Exams</h2>
-        </div>
-    </div>
 
 
     </div><!-- container -->

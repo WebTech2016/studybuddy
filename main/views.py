@@ -13,6 +13,9 @@ def index(request):
     resources = Resource.objects.all()
     return render(request, 'main/index.html', {'resources': resources})
 
+def about(request):
+    return render(request, 'main/about.html')
+
 def courses(request):
     courses = Course.objects.all()
     bachelorcollege = Course.objects.filter(major__icontains = "bachelorcollege").order_by("name")
