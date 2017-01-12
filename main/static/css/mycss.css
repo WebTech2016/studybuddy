@@ -228,7 +228,11 @@ p, ul, li, div, nav {
 }
 
 
-
+@media (max-width:480px) {
+  .smaller-text{
+    font-size: 15px;
+  }
+}
 
 
 
