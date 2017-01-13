@@ -1,8 +1,27 @@
-body, html {
+/* fonts */
 
-    font-family: Calibri;
+@font-face {
+    font-family: Comfortaa-Bold;
+    src: url(../fonts/Comfortaa-Bold.ttf) format('truetype');
 }
 
+@font-face {
+    font-family: Comfortaa-Light;
+    src: url(../fonts/Comfortaa-Light.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: Comfortaa-Regular;
+    src: url(../fonts/Comfortaa-Regular.ttf) format('truetype');
+}
+
+/* fonts end */
+
+body, html {
+    font-family: Comfortaa-Regular;
+}
+
+/* Make the footer stick to the bottom of the page */
 html {
   position: relative;
   min-height: 100%;
@@ -10,21 +29,81 @@ html {
 
 body {
   /* Margin bottom by footer height */
-  margin-bottom: 60px;
+  margin-bottom: 55px;
 }
+
+html,body {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+a.navbar-brand {
+  font-family: Comfortaa-Bold;
+  font-size: 2.2em;
+}
+
+.navbar-default .navbar-nav>li>a {
+    font-size: 1.4em
+}
+
+@media (max-width:1024px) {
+    .navbar-default .navbar-nav>li>a {
+        font-size: 1.1em;
+    }
+}
+
+/* fix for placeholder adjusting length placeholder text searchbox home page */
+input.large {
+    display: inline-block;
+}
+
+input.small {
+    display: none;
+}
+
+input.phone {
+    display: none;
+}
+
+@media (max-width: 720px) {
+    input.large {
+        display: none;
+    }
+    input.small {
+        display: inline-block;
+    }
+    input.phone {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    input.large {
+        display: none;
+    }
+    input.small {
+        display: none;
+    }
+    input.phone {
+        display: inline-block;
+    }
+}
+
+/* end fix for placeholder text searchbox homescreen */
 
 .footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
-  
+  height: 60px;
   background-color: #f5f5f5;
 }
+/* end fix for footer */
 
 /*Adding top padding to rows*/
 .pad-top {
-    padding: 50px 0 0 0;
+    padding: 60px 0 0 0;
 }
 
 .pad-top-2 {
@@ -34,10 +113,6 @@ body {
 .center {
     text-align: center;
 }
-
-
-
-
 
 .header {
   background-image: url("http://blogs.yis.ac.jp/21boweringk/files/2015/11/cropped-html-color-codes-color-tutorials-hero-00e10b1f-25giert.jpg");
@@ -50,7 +125,6 @@ body {
   margin: 0;
   border: none;
   box-shadow: none;
-  color: #FFF;
 }
 
 #navid .active a {
@@ -127,6 +201,55 @@ body {
     padding: 20px 0;
 }
 
+/* login menu */
+
+#loginmenu {
+    display: none;
+    background: #DEDEDE;
+    padding: 10px;
+    border-radius: 5px;
+    border-bottom: 1px solid #BBB;
+    z-index: 2000;
+}
+
+#loginmenu input[type=text], #loginmenu input[type=password] {
+    margin-bottom: 10px;
+}
+
+#loginmenu.active {
+    display: block;
+    position: absolute;
+    left: calc(-50% - 10px);
+}
+
+@media (min-width: 768px) {
+    #loginmenu.active:after {
+    	bottom: 100%;
+    	left: 50%;
+    	border: solid transparent;
+    	content: " ";
+    	height: 0;
+    	width: 0;
+    	position: absolute;
+    	pointer-events: none;
+    	border-color: rgba(136, 183, 213, 0);
+    	border-bottom-color: #DEDEDE;
+    	border-width: 10px;
+    	margin-left: -10px;
+    }
+}
+
+/* menu for mobile */
+@media (max-width: 768px) {
+    #loginmenu.active {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+}
+
 
 
 
@@ -141,6 +264,11 @@ body {
     color: #FFF;
     padding: 15px 5px;
     background: #888;
+    cursor: pointer;
+}
+
+#actable td {
+    cursor: pointer;
 }
 
 #actable .actableheight {
@@ -226,64 +354,8 @@ p, ul, li, div, nav {
 }
 
 
-
-
-
-
-
-
-
-/*#menu {
-    overflow: auto;
-    position: relative;
-    z-index: 2;
+@media (max-width:480px) {
+  .smaller-text{
+    font-size: 15px;
+  }
 }
-
-
-.parent-menu {
-    background-color: #0c8fff;
-    min-width: 200px;
-    float: left;
-    height: auto;
-}
-
-#menu ul {
-    list-style-type: none;
-}
-
-#menu ul li a {
-    padding: 10px 15px;
-    display: block;
-    color: #fff;
-    text-decoration: none;
-}
-
-#menu ul li a:hover {
-    background-color: #007ee9;
-}
-
-#menu ul li:hover>ul {
-    left: 200px;
-    -webkit-transition: left 200ms ease-in;
-    -moz-transition: left 200ms ease-in;
-    -ms-transition: left 200ms ease-in;
-    transition: left 200ms ease-in;
-}
-
-#menu ul li>ul {
-    position: absolute;
-    background-color: #333;
-    top: 0;
-    left: -200px;
-    min-width: 200px;
-    z-index: -1;
-    height: auto;
-    -webkit-transition: left 200ms ease-in;
-    -moz-transition: left 200ms ease-in;
-    -ms-transition: left 200ms ease-in;
-    transition: left 200ms ease-in;
-}
-
-#menu ul li>ul li a:hover {
-    background-color: #2e2e2e;
-}*/

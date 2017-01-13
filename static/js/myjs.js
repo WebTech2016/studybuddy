@@ -9,6 +9,14 @@ $(function() {
 
     }
 
+    //login menu
+    $("#loginlink").click( function(e) {
+        //disable link click
+        e.preventDefault();
+        //show menu
+        $("#loginmenu").toggleClass("active");
+    });
+
 
 
       $("#majorjs").change(function(){

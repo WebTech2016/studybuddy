@@ -1,0 +1,12 @@
+{% extends 'main/index.html' %}
+
+{% block loginjs %}
+{% load staticfiles %}
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#loginmenu").toggleClass("active");
+    });
+</script>
+
+{% endblock %}
