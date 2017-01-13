@@ -42,7 +42,16 @@
                                         </form>
                                     </div>
                                 </li>
-                                <li><a href="">Register</a></li>
+                                <li><a id="reglink" href="">Register</a>
+                                    <div id="regmenu">
+                                        <form>
+                                            <input type="text" name="username" placeholder="Username"><br>
+                                            <input type="password" name="password" placeholder="Password"><br>
+                                            <input type="email" name="email" placeholder="E-mailaddress"><br>
+                                            <input type="submit" name="register" value="register">
+                                        </form>
+                                    </div>
+                                </li>
                                 <li><a href="{% url 'upload' %}">Upload</a></li>
                             </ul>
                         </div>
