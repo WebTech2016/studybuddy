@@ -196,6 +196,14 @@ input.phone {
     padding: 20px 0;
 }
 
+/* login menu */
+#loginmenu {
+    width: 200px;
+    height:70px;
+    background: #0f0;
+    position: absolute;
+    left: -50%;
+}
 
 
 
