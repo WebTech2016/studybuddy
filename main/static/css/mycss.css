@@ -32,6 +32,11 @@ body {
   margin-bottom: 55px;
 }
 
+html,body {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
 a.navbar-brand {
   font-family: Comfortaa-Bold;
   font-size: 2.2em;
@@ -197,13 +202,54 @@ input.phone {
 }
 
 /* login menu */
+
 #loginmenu {
-    width: 200px;
-    height:70px;
-    background: #0f0;
-    position: absolute;
-    left: -50%;
+    display: none;
+    background: #DEDEDE;
+    padding: 10px;
+    border-radius: 5px;
+    border-bottom: 1px solid #BBB;
+    z-index: 2000;
 }
+
+#loginmenu input[type=text], #loginmenu input[type=password] {
+    margin-bottom: 10px;
+}
+
+#loginmenu.active {
+    display: block;
+    position: absolute;
+    left: calc(-50% - 10px);
+}
+
+@media (min-width: 768px) {
+    #loginmenu.active:after {
+    	bottom: 100%;
+    	left: 50%;
+    	border: solid transparent;
+    	content: " ";
+    	height: 0;
+    	width: 0;
+    	position: absolute;
+    	pointer-events: none;
+    	border-color: rgba(136, 183, 213, 0);
+    	border-bottom-color: #DEDEDE;
+    	border-width: 10px;
+    	margin-left: -10px;
+    }
+}
+
+/* menu for mobile */
+@media (max-width: 768px) {
+    #loginmenu.active {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+}
+
 
 
 
@@ -218,6 +264,11 @@ input.phone {
     color: #FFF;
     padding: 15px 5px;
     background: #888;
+    cursor: pointer;
+}
+
+#actable td {
+    cursor: pointer;
 }
 
 #actable .actableheight {
