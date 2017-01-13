@@ -2,13 +2,13 @@
 
 <body>
 
-<!-- header-->
+    <!-- header-->
     <div class="container-fullwidth">
         <div class="header">
             <div class="container">
                 <nav id="navid" class="navbar navbar-default">
                     <div class="container-fluid">
-                    <!-- Brand and toggle get grouped for better mobile display -->
+                        <!-- Brand and toggle get grouped for better mobile display -->
                         <div class="navbar-header">
                             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                               <span class="sr-only">Toggle navigation</span>
@@ -16,25 +16,34 @@
                               <span class="icon-bar"></span>
                               <span class="icon-bar"></span>
                             </button>
-                            <a class="navbar-brand" href="{% url "index" %}">StudyBuddy</a>
-                        </div><!-- navbar-header-->
+                            <a class="navbar-brand" href="{% url 'index' %}">StudyBuddy</a>
+                        </div>
+                        <!-- navbar-header-->
 
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav">
-                                <li class="active"><a href="{% url "index" %}">Home <span class="sr-only">(current)</span></a></li>
-                                <li><a href="{% url "about"%}">About</a></li>
-                                <li><a href="{% url "courses"%}">Courses</a></li>
+                                <li class="active"><a href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a></li>
+                                <li><a href="{% url 'about' %}">About</a></li>
+                                <li><a href="{% url 'courses' %}">Courses</a></li>
                             </ul>
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a href="{% url "upload"%}">Upload</a></li>
+                                <li><a href="">Log In</a></li>
+                                <li><a href="">Register</a></li>
+                                <li><a href="{% url 'upload' %}">Upload</a></li>
                             </ul>
-                        </div><!-- /.navbar-collapse -->
-                    </div><!-- /.container-fluid -->
-                </nav><!-- navbar-default -->
-            </div><!-- container-->
-        </div><!-- header-->
-    </div><!-- container-fullwidth -->
+                        </div>
+                        <!-- /.navbar-collapse -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+                <!-- navbar-default -->
+            </div>
+            <!-- container-->
+        </div>
+        <!-- header-->
+    </div>
+    <!-- container-fullwidth -->
 
 
     <!-- content -->
@@ -45,13 +54,14 @@
 
 
 
-        <form  method= "get" action="/search/" id="searchbarform">
+        <form method="get" action="/search/" id="searchbarform">
             <div id="searchbargroup" class="form-group">
-                <input  type="text" class="form-control large input-medium search-query" name="q" placeholder='"Computer Science",  "Web Analytics",  "2INC0"'>
+                <input type="text" class="form-control large input-medium search-query" name="q" placeholder='"Computer Science",  "Web Analytics",  "2INC0"'>
                 <!--<input  type="text" class="form-control large input-medium search-query" name="q" placeholder='"Computer Science",  "Web Analytics"'>
                 <input  type="text" class="form-control large input-medium search-query" name="q"placeholder='"Computer Science"'>-->
                 <input type="submit" class="btn btn-default btn-main" id="searchbarbutton" value="Search!">
-            </div><!-- form-group -->
+            </div>
+            <!-- form-group -->
             <label><input type="checkbox" name="checkbox" value="value" checked>Summaries</label>
             <label><input type="checkbox" name="checkbox" value="value" checked>Exams</label>
             <label><input type="checkbox" name="checkbox" value="value" checked>Courses</label>
@@ -59,35 +69,38 @@
         </form>
 
 
-    <div class="row pad-top">
+        <div class="row pad-top">
 
-        <h1 class="center">You're in good company!</h1>
+            <h1 class="center">You're in good company!</h1>
 
-        <div class="col-xs-4 iconstuff">
-            <img src="{% static 'img/courses.svg' %}" />
-            <h2 class="smaller-text">69 Courses</h2>
+            <div class="col-xs-4 iconstuff">
+                <img src="{% static 'img/courses.svg' %}" />
+                <h2 class="smaller-text">69 Courses</h2>
+            </div>
+            <div class="col-xs-4 iconstuff">
+                <img src="{% static 'img/summaries.svg' %}" />
+                <h2 class="smaller-text">123 Summaries</h2>
+            </div>
+            <div class="col-xs-4 iconstuff">
+                <img src="{% static 'img/exams.svg' %}" />
+                <h2 class="smaller-text">130 Exams</h2>
+            </div>
         </div>
-        <div class="col-xs-4 iconstuff">
-            <img src="{% static 'img/summaries.svg' %}" />
-            <h2 class="smaller-text">123 Summaries</h2>
-        </div>
-        <div class="col-xs-4 iconstuff">
-            <img src="{% static 'img/exams.svg' %}" />
-            <h2 class="smaller-text">130 Exams</h2>
-        </div>
+
+
     </div>
-
-
-    </div><!-- container -->
+    <!-- container -->
 
     <footer class='container-fullwidth footer' id="footer">
         <div class="container">
-            <p>StudyBuddy Copyright &copy;  2017. All rights reserved.
-              <!--  <a class="pull-right" href="https://www.facebook.com/"><img height="25px" width="25px" src="https://www.facebook.com/images/fb_icon_325x325.png" /></a>
+            <p>StudyBuddy Copyright &copy; 2017. All rights reserved.
+                <!--  <a class="pull-right" href="https://www.facebook.com/"><img height="25px" width="25px" src="https://www.facebook.com/images/fb_icon_325x325.png" /></a>
                 <a class="pull-right" href="https://twitter.com/?lang=nl"><img height="25px" width="25px" src="https://g.twimg.com/ios_homescreen_icon.png" /></a> -->
             </p>
-        </div><!-- container -->
-    </footer><!-- footer -->
+        </div>
+        <!-- container -->
+    </footer>
+    <!-- footer -->
 
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
