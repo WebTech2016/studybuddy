@@ -29,9 +29,27 @@ def index(request):
     return render(request, 'main/index.html', {'resources': resources, 'summaries': summaries, 'exams': exams, 'courses': courses, 'form': form})
 
 def about(request):
+    if request.method == "POST":
+        form = UserForm(request.POST)
+        if form.is_valid():
+            new_user = User.objects.create_user(**form.cleaned_data)
+            login(request, new_user)
+            return redirect('about')
+    else:
+        form = UserForm()
     return render(request, 'main/about.html')
 
 def courses(request):
+
+    if request.method == "POST":
+        form = UserForm(request.POST)
+        if form.is_valid():
+            new_user = User.objects.create_user(**form.cleaned_data)
+            login(request, new_user)
+            return redirect('courses')
+    else:
+        form = UserForm()
+
     courses = Course.objects.all()
     bachelorcollege = Course.objects.filter(major__icontains = "bachelorcollege").order_by("name")
     appliedmathematics = Course.objects.filter(major__icontains = "appliedmathematics").order_by("name")
@@ -54,22 +72,41 @@ def courses(request):
     'psychologyandtechnology': psychologyandtechnology, 'sustainableinnovation': sustainableinnovation})
 
 def course(request, pk):
+    if request.method == "POST":
+        form = UserForm(request.POST)
+        if form.is_valid():
+            new_user = User.objects.create_user(**form.cleaned_data)
+            login(request, new_user)
+            return redirect('course', pk=pk)
+    else:
+        form = UserForm()
+
     course = get_object_or_404(Course, pk=pk)
     resources = Resource.objects.filter(course__name = course)
     return render(request, 'main/course.html', {'course': course, 'resources': resources})
 
 def upload(request):
+    formupl = UploadForm()
+    form = UserForm()
     if request.method == "POST":
-        form = UploadForm(request.POST or None, request.FILES or None)
-        if form.is_valid():
-            resourceupload = form.save(commit=False)
-            resourceupload.uploadedBy = request.user
-            resourceupload.upload_date = timezone.now()
-            resourceupload.save()
-            return redirect('course', pk=resourceupload.course.pk)
+        formupl = UploadForm(request.POST or None, request.FILES or None)
+        form = UserForm(request.POST)
+        if request.POST.get("form_type") == 'formupload':
+            if formupl.is_valid():
+                resourceupload = formupl.save(commit=False)
+                resourceupload.uploadedBy = request.user
+                resourceupload.upload_date = timezone.now()
+                resourceupload.save()
+                return redirect('course', pk=resourceupload.course.pk)
+        elif request.POST.get("form_type") == 'formreg':
+            if form.is_valid():
+                new_user = User.objects.create_user(**form.cleaned_data)
+                login(request, new_user)
+                return redirect('upload')
     else:
-        form = UploadForm()
-    return render(request, 'main/upload.html', {'form': form})
+        formupl = UploadForm()
+        form = UserForm()
+    return render(request, 'main/upload.html', {'formupl': formupl, 'form': form})
 
 def addcourse(request):
     if request.method == "POST":
@@ -93,8 +130,17 @@ def download(request, path):
         raise Http404
 
 def search(request):
+    if request.method == "POST":
+        form = UserForm(request.POST)
+        if form.is_valid():
+            new_user = User.objects.create_user(**form.cleaned_data)
+            login(request, new_user)
+            return redirect('index')
+    else:
+        form = UserForm()
+
     query = request.GET['q']
     results = Course.objects.filter(name__contains=query)
     temp = get_template('main/searchresults.html')
     context = Context({'results': results, 'query': query})
-    return HttpResponse(temp.render(context))
+    return render(request, 'main/searchresults.html', {'results': results, 'query': query} )

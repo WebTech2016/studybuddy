@@ -27,6 +27,7 @@ html {
   min-height: 100%;
 }
 
+
 body {
   /* Margin bottom by footer height */
   margin-bottom: 55px;
@@ -53,6 +54,7 @@ a.navbar-brand {
 }
 
 /* fix for placeholder adjusting length placeholder text searchbox home page */
+/*
 input.large {
     display: inline-block;
 }
@@ -88,7 +90,7 @@ input.phone {
         display: inline-block;
     }
 }
-
+*/
 /* end fix for placeholder text searchbox homescreen */
 
 .footer {

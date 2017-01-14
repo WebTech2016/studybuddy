@@ -52,11 +52,13 @@
                                 </li>
                                 <li><a id="reglink" href="#">Register</a>
                                     <div id="regmenu">
-                                        <form>
+                                        <form method="post" action="">
+                                            {% csrf_token %}
                                             <input type="text" name="username" placeholder="Username"><br>
                                             <input type="password" name="password" placeholder="Password"><br>
                                             <input type="email" name="email" placeholder="E-mailaddress"><br>
                                             <input type="submit" name="register" value="register">
+                                            <input type="hidden" name="form_type" value="formreg">
                                         </form>
                                     </div>
                                 </li>
@@ -78,36 +80,52 @@
 
     <div class="container">
         <div class="row">
+            {% if user.is_authenticated %}
             <form method="POST" enctype="multipart/form-data" class="post-form">
                 {% csrf_token %}
                 <table>
                     <tr>
-                        <td>{{ form.title.label_tag }}</td>
-                        <td>{{ form.title }}</td>
+                        <td>{{ formupl.title.label_tag }}</td>
+                        <td>{{ formupl.title }}</td>
                     </tr>
                     <!--<tr>
                         <td>{{ form.major.label_tag }}</td>
                         <td id="majorcs" >{{ form.major }}</td>
                     </tr>-->
                     <tr>
-                        <td>{{ form.course.label_tag }}</td>
-                        <td id="coursejs">{{ form.course }}</td>
+                        <td>{{ formupl.course.label_tag }}</td>
+                        <td id="coursejs">{{ formupl.course }}</td>
                         <td>
                             <button type="button" onclick="window.document.location='{% url 'addcourse' %}'" }>Add Course</button>
                         </td>
                     </tr>
                     <tr>
-                        <td>{{ form.resourcetype.label_tag }}</td>
-                        <td>{{ form.resourcetype }}</td>
+                        <td>{{ formupl.resourcetype.label_tag }}</td>
+                        <td>{{ formupl.resourcetype }}</td>
                     </tr>
                     <tr>
-                        <td>{{ form.resourcefile.label_tag }}</td>
-                        <td>{{ form.resourcefile }}</td>
+                        <td>{{ formupl.resourcefile.label_tag }}</td>
+                        <td>{{ formupl.resourcefile }}</td>
                     </tr>
                 </table>
-                <button type="submit" class="save btn btn-blog pull-right">SAVE</button>
+                <button name='upload' type="submit" class="save btn btn-blog pull-right">SAVE</button>
+                <input type="hidden" name="form_type" value="formupload">
             </form>
-
+          {% else %}
+          <h4>
+             Welcome to StudyBuddy. We allow only registered users to upload files.
+          </h4>
+          <a  onclick='$("#loginmenu").toggleClass("active"); $("#regmenu").removeClass("active");'> <h4> Please log in to upload your summaries and exams or if you want to add courses to our evergrowing database.</h4>
+          </a>
+          <a  onclick='$("#regmenu").toggleClass("active"); $("#loginmenu").removeClass("active");'> <h4> Don't have an account yet? Register now and join the StudyBuddy Community!</h4>
+          </a>
+          <h4>
+            Once you have an account you yourself can contribute to the evergrowing StudyBuddy database of resources. This will aid students to get the most out of their studies.
+          </h4>
+          <h4>
+            With StudyBuddy all the resources you need are in one convenient and easy-accessible place
+          </h4>
+          {% endif %}
         </div>
     </div>
 
