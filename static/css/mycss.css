@@ -201,9 +201,8 @@ input.phone {
     padding: 20px 0;
 }
 
-/* login menu */
-
-#loginmenu {
+/* login & registration menu */
+#loginmenu, #regmenu {
     display: none;
     background: #DEDEDE;
     padding: 10px;
@@ -212,18 +211,18 @@ input.phone {
     z-index: 2000;
 }
 
-#loginmenu input[type=text], #loginmenu input[type=password] {
+#loginmenu input[type=text], #loginmenu input[type=password], #regmenu input[type=text], #regmenu input[type=password], #regmenu input[type=email] {
     margin-bottom: 10px;
 }
 
-#loginmenu.active {
+#loginmenu.active, #regmenu.active {
     display: block;
     position: absolute;
     left: calc(-50% - 10px);
 }
 
 @media (min-width: 768px) {
-    #loginmenu.active:after {
+    #loginmenu.active:after, #regmenu.active:after {
     	bottom: 100%;
     	left: 50%;
     	border: solid transparent;
@@ -241,7 +240,7 @@ input.phone {
 
 /* menu for mobile */
 @media (max-width: 768px) {
-    #loginmenu.active {
+    #loginmenu.active, #regmenu.active {
         position: fixed;
         top: 50%;
         left: 50%;

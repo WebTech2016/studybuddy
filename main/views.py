@@ -1,8 +1,12 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Resource, Course
-from .forms import UploadForm, AddCourseForm
+from .forms import UploadForm, AddCourseForm, UserForm
+from django.contrib.auth import login
+from django.contrib.auth.models import User
 from django.utils import timezone
-from django.shortcuts import redirect
+from django.shortcuts import redirect, render_to_response
+from django.http import HttpResponseRedirect, HttpResponse
+from django.urls import reverse
 import os
 from django.conf import settings
 from django.http import HttpResponse
@@ -10,8 +14,19 @@ from django.template import Context
 from django.template.loader import get_template
 
 def index(request):
+    if request.method == "POST":
+        form = UserForm(request.POST)
+        if form.is_valid():
+            new_user = User.objects.create_user(**form.cleaned_data)
+            login(request, new_user)
+            return redirect('index')
+    else:
+        form = UserForm()
     resources = Resource.objects.all()
-    return render(request, 'main/index.html', {'resources': resources})
+    summaries = Resource.objects.filter(resourcetype__icontains = "Summary")
+    exams = Resource.objects.filter(resourcetype__icontains = "Exam")
+    courses = Course.objects.all()
+    return render(request, 'main/index.html', {'resources': resources, 'summaries': summaries, 'exams': exams, 'courses': courses, 'form': form})
 
 def about(request):
     return render(request, 'main/about.html')
