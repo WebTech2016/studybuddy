@@ -15,31 +15,34 @@
     src: url(../fonts/Comfortaa-Regular.ttf) format('truetype');
 }
 
+
 /* fonts end */
 
 body, html {
     font-family: Comfortaa-Regular;
 }
 
+
 /* Make the footer stick to the bottom of the page */
+
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 55px;
+    /* Margin bottom by footer height */
+    margin-bottom: 55px;
 }
 
-html,body {
+html, body {
     overflow-x: hidden;
     overflow-y: auto;
 }
 
 a.navbar-brand {
-  font-family: Comfortaa-Bold;
-  font-size: 2.2em;
+    font-family: Comfortaa-Bold;
+    font-size: 2.2em;
 }
 
 .navbar-default .navbar-nav>li>a {
@@ -52,7 +55,35 @@ a.navbar-brand {
     }
 }
 
+.hoverTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.hoverTable td {
+    padding: 7px;
+    border: #4e95f4 1px solid;
+}
+
+
+/* Define the default color for all the table rows */
+
+.hoverTable tr {
+    background: #b8d1f3;
+}
+
+
+/* Define the hover highlight color for the table row */
+
+.hoverTable tr:hover {
+    background-color: #cc66ff;
+}
+
+
 /* fix for placeholder adjusting length placeholder text searchbox home page */
+
+
+/*
 input.large {
     display: inline-block;
 }
@@ -88,20 +119,26 @@ input.phone {
         display: inline-block;
     }
 }
+*/
+
 
 /* end fix for placeholder text searchbox homescreen */
 
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  /* Set the fixed height of the footer here */
-  height: 60px;
-  background-color: #f5f5f5;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background-color: #f5f5f5;
 }
+
+
 /* end fix for footer */
 
+
 /*Adding top padding to rows*/
+
 .pad-top {
     padding: 60px 0 0 0;
 }
@@ -115,25 +152,25 @@ input.phone {
 }
 
 .header {
-  background-image: url("http://blogs.yis.ac.jp/21boweringk/files/2015/11/cropped-html-color-codes-color-tutorials-hero-00e10b1f-25giert.jpg");
-  background-size: cover;
+    background-image: url("http://blogs.yis.ac.jp/21boweringk/files/2015/11/cropped-html-color-codes-color-tutorials-hero-00e10b1f-25giert.jpg");
+    background-size: cover;
 }
 
 .navbar-default {
-  background: none;
-  padding: 0;
-  margin: 0;
-  border: none;
-  box-shadow: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    border: none;
+    box-shadow: none;
 }
 
 #navid .active a {
-  background: rgba(255,255,255,0.4);
-  text-shadow: 1px 1px rgba(0,0,0,0.4);
+    background: rgba(255, 255, 255, 0.4);
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
 }
 
 #navid a {
-  color: #FFF;
+    color: #FFF;
 }
 
 #picture1 {
@@ -160,12 +197,11 @@ input.phone {
     vertical-align: middle;
 }
 
-@media only screen and (orientation : portrait) {
+@media only screen and (orientation: portrait) {
     #searchbarform {
         width: 80%;
         margin: 0 0 0 10%;
     }
-
     #searchbarform label {
         padding: 0 5px;
         margin: 0;
@@ -201,7 +237,9 @@ input.phone {
     padding: 20px 0;
 }
 
+
 /* login & registration menu */
+
 #loginmenu, #regmenu {
     display: none;
     background: #DEDEDE;
@@ -223,22 +261,24 @@ input.phone {
 
 @media (min-width: 768px) {
     #loginmenu.active:after, #regmenu.active:after {
-    	bottom: 100%;
-    	left: 50%;
-    	border: solid transparent;
-    	content: " ";
-    	height: 0;
-    	width: 0;
-    	position: absolute;
-    	pointer-events: none;
-    	border-color: rgba(136, 183, 213, 0);
-    	border-bottom-color: #DEDEDE;
-    	border-width: 10px;
-    	margin-left: -10px;
+        bottom: 100%;
+        left: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-color: rgba(136, 183, 213, 0);
+        border-bottom-color: #DEDEDE;
+        border-width: 10px;
+        margin-left: -10px;
     }
 }
 
+
 /* menu for mobile */
+
 @media (max-width: 768px) {
     #loginmenu.active, #regmenu.active {
         position: fixed;
@@ -246,10 +286,7 @@ input.phone {
         left: 50%;
         transform: translate(-50%, -50%);
     }
-
 }
-
-
 
 
 /* courses accordion menu table */
@@ -276,13 +313,13 @@ input.phone {
     transition: .5s;
 }
 
-#actable .actablewrap.active .actableheight{
+#actable .actablewrap.active .actableheight {
     height: auto;
 }
 
 
-
 /* Alain */
+
 .SearchBarMain {
     /*width: 500px;
     height: 100px;*/
@@ -291,6 +328,7 @@ input.phone {
     background-position: center;*/
 }
 
+
 /*.footer {
     position:absolute;
     bottom:0px;
@@ -298,63 +336,56 @@ input.phone {
     margin: 0;
     background-color: #000;
     height: 40px;/* or however high you would like */
-}*/
 
+
+}
+*/
 /*place background images*/
-.service-box1{
-  background-image: url("https://assets.entrepreneur.com/content/3x2/1300/1410376858-experts-agree-great-entrepreneurs-keep-good-company.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 200px;
-  width: 200px;
-
+.service-box1 {
+    background-image: url("https://assets.entrepreneur.com/content/3x2/1300/1410376858-experts-agree-great-entrepreneurs-keep-good-company.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width: 200px;
 }
-.service-box2{
-  background-image: url("http://d.stockcharts.com/img/articles/2015/10/1443714241523351659578.png");
-  background-size: cover;
-  background-position: center;
-  height: 200px;
-  width: 200px;
+.service-box2 {
+    background-image: url("http://d.stockcharts.com/img/articles/2015/10/1443714241523351659578.png");
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width: 200px;
 }
-
-.service-box3{
-  background-image: url("https://www.toprankers.com/exams/wp-content/uploads/2015/12/exam.png");
-  background-size: cover;
-  background-position: center;
-  height: 200px;
-  width: 200px;
+.service-box3 {
+    background-image: url("https://www.toprankers.com/exams/wp-content/uploads/2015/12/exam.png");
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width: 200px;
 }
-
-.service-box4{
-  background-image: url("https://www.asme.org/getmedia/c2c8ea5a-b690-4ba7-92bb-34bd1432862b/book_guide_hero_books.aspx");
-  background-size: cover;
-  background-position: center;
-  height: 200px;
-  width: 200px;
+.service-box4 {
+    background-image: url("https://www.asme.org/getmedia/c2c8ea5a-b690-4ba7-92bb-34bd1432862b/book_guide_hero_books.aspx");
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width: 200px;
 }
-
 h3 {
-  color: white;
-  background-color: rgba(255, 150, 0, 0.9);
+    color: white;
+    background-color: rgba(255, 150, 0, 0.9);
 }
-
-
-.container-course{
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Blue_globe_banner.svg/2000px-Blue_globe_banner.svg.png");
-  background-size: cover;
-  background-position: center;
+.container-course {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Blue_globe_banner.svg/2000px-Blue_globe_banner.svg.png");
+    background-size: cover;
+    background-position: center;
 }
 
 /*Alain end*/
-
 p, ul, li, div, nav {
     padding: 0;
     margin: 0;
 }
-
-
 @media (max-width:480px) {
-  .smaller-text{
-    font-size: 15px;
-  }
+    .smaller-text {
+        font-size: 15px;
+    }
 }

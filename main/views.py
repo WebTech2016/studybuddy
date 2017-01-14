@@ -23,8 +23,8 @@ def index(request):
     else:
         form = UserForm()
     resources = Resource.objects.all()
-    summaries = Resource.objects.filter(resourcetype__icontains = "Summary")
-    exams = Resource.objects.filter(resourcetype__icontains = "Exam")
+    summaries = Resource.objects.filter(resourcetype = "Summary")
+    exams = Resource.objects.filter(resourcetype = "Exam")
     courses = Course.objects.all()
     return render(request, 'main/index.html', {'resources': resources, 'summaries': summaries, 'exams': exams, 'courses': courses, 'form': form})
 
@@ -80,10 +80,11 @@ def course(request, pk):
             return redirect('course', pk=pk)
     else:
         form = UserForm()
-
     course = get_object_or_404(Course, pk=pk)
     resources = Resource.objects.filter(course__name = course)
-    return render(request, 'main/course.html', {'course': course, 'resources': resources})
+    summaries = Resource.objects.filter(course__name = course).filter(resourcetype = "Summary")
+    exams = Resource.objects.filter(course__name = course).filter(resourcetype = "Exam")
+    return render(request, 'main/course.html', {'course': course, 'resources': resources, 'summaries': summaries, 'exams': exams})
 
 def upload(request):
     formupl = UploadForm()

@@ -78,22 +78,29 @@
     <!-- container-fullwidth -->
 
 
-    <div class="container container-course">
+    <div class="container-fluid coursecon">
+        <div class="row container-course">
+            <h1 style="font-weight: 600; color: black;">{{course.name}}</h1>
+        </div>
+    </div>
+    <div class="container">
+
+        {% if resources %} {% if exams %}
         <div class="row">
-            <h1>{{course.name}}</h1>
-            <table class="table">
+            <h2 style="font-family: 'Comfortaa-Bold';">Exams</h2>
+            <table class="table hoverTable">
                 <thead>
                     <tr>
                         <th>Type</th>
-                        <th>Name</th>
+                        <th>Title</th>
                         <th>Uploaded By</th>
                         <th>File</th>
                     </tr>
                 </thead>
                 <tbody>
-                    {% for res in resources%}
-                    <tr>
-                        <th scope="row">{{res.resourcetype}}</th>
+                    {% for res in exams%}
+                    <tr onclick="window.document.location='{{res.resourcefile.url}}'">
+                        <td scope="row">{{res.resourcetype}}</td>
                         <td>{{res.title}}</td>
                         <td>{{res.uploadedBy}}</td>
                         <td><a href="{{res.resourcefile.url}}">{{res.resourcefile}}</a></td>
@@ -101,9 +108,42 @@
                     {% endfor %}
                 </tbody>
             </table>
-
-
         </div>
+        {% endif %} {% if summaries %}
+        <div class="row">
+            <h2 style="font-family: 'Comfortaa-Bold';">Summaries</h2>
+            <table class="table hoverTable">
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Title</th>
+                        <th>Uploaded By</th>
+                        <th>File</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for res in summaries%}
+                    <tr onclick="window.document.location='{{res.resourcefile.url}}'">
+                        <td scope="row">{{res.resourcetype}}</td>
+                        <td>{{res.title}}</td>
+                        <td>{{res.uploadedBy}}</td>
+                        <td><a href="{{res.resourcefile.url}}">{{res.resourcefile}}</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% endif %} {% else %}
+        <div class="row">
+            <h4>There are no resources uploaded for the course {{course.name}} yet.</h4>
+            <a href="{% url 'upload' %}"><h4> Upload your resources now and contribute to StudyBuddy!</h4></a>
+            <a onclick='$("#regmenu").toggleClass("active"); $("#loginmenu").removeClass("active");'>
+                <h4> Not registred yet? Register now and start contributing to the evergrowing StudyBuddy database</h4>
+            </a>
+        </div>
+
+        {% endif %}
+    </div>
     </div>
 
 
