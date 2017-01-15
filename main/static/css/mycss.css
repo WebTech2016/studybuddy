@@ -430,3 +430,20 @@ p, ul, li, div, nav {
         font-size: 15px;
     }
 }
+
+/* upload form */
+
+#uploadform {
+    padding: 30px 0;
+}
+
+#uploadform td, #uploadform th {
+    padding: 10px;
+}
+
+#uploadform input[type=text], #uploadform select {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px #999 solid;
+    padding: 8px 5px;
+}
