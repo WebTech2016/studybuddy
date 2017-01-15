@@ -177,7 +177,7 @@
         <div class="row">
             <h4>Nothing found for "{{query}}". Please try again. </h4>
             <a href="{% url 'upload' %}"><h4> Still nothing? Upload your resources now and contribute to StudyBuddy!</h4></a>
-            <a onclick='$("#regmenu").toggleClass("active"); $("#loginmenu").removeClass("active");'>
+            <a onclick='$("#regmenu").toggleClass("active"); $("#loginmenu").removeClass("active"); $(".navbar-toggle").trigger("click");'>
                 <h4> Not registred yet? Register now and start contributing to the evergrowing StudyBuddy database</h4>
             </a>
         </div>
