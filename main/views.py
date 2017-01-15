@@ -143,10 +143,10 @@ def search(request):
     query = request.GET['q']
     major = query.replace(" ", "")
     major = major.lower()
-    results = Resource.objects.filter(title__icontains=query)
+    results = Resource.objects.filter(title__icontains=query) | Resource.objects.filter(major__icontains=major) | Resource.objects.filter(course__name__icontains = query)
     courses = Course.objects.filter(name__icontains=query) | Course.objects.filter(major__icontains=major) | Course.objects.filter(course_id__icontains=query)
-    summaries = Resource.objects.filter(title__icontains=query).filter(resourcetype = "Summary") | Resource.objects.filter(major__icontains=major).filter(resourcetype = "Summary")
-    exams = Resource.objects.filter(title__icontains=query).filter(resourcetype = "Exam") | Resource.objects.filter(major__icontains=major).filter(resourcetype = "Exam")
+    summaries = Resource.objects.filter(title__icontains=query).filter(resourcetype = "Summary") | Resource.objects.filter(major__icontains=major).filter(resourcetype = "Summary") | Resource.objects.filter(course__name__icontains = query).filter(resourcetype = "Summary")
+    exams = Resource.objects.filter(title__icontains=query).filter(resourcetype = "Exam") | Resource.objects.filter(major__icontains=major).filter(resourcetype = "Exam") | Resource.objects.filter(course__name__icontains = query).filter(resourcetype = "Exam")
     temp = get_template('main/searchresults.html')
     context = Context({'results': results, 'query': query})
     return render(request, 'main/searchresults.html', {'courses': courses, 'summaries': summaries, 'results': results, 'exams': exams, 'query': query} )
