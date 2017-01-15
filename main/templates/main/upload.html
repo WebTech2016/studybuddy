@@ -80,6 +80,7 @@
 
     <div class="container">
         <div class="row">
+            <h1>Upload a new document</h1>
             {% if user.is_authenticated %}
             <form id="uploadform" method="POST" enctype="multipart/form-data" class="post-form">
                 {% csrf_token %}
