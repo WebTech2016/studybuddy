@@ -144,7 +144,7 @@ def search(request):
     major = query.replace(" ", "")
     major = major.lower()
     results = Resource.objects.filter(title__icontains=query)
-    courses = Course.objects.filter(name__icontains=query) | Course.objects.filter(major__icontains=major)
+    courses = Course.objects.filter(name__icontains=query) | Course.objects.filter(major__icontains=major) | Course.objects.filter(course_id__icontains=query)
     summaries = Resource.objects.filter(title__icontains=query).filter(resourcetype = "Summary") | Resource.objects.filter(major__icontains=major).filter(resourcetype = "Summary")
     exams = Resource.objects.filter(title__icontains=query).filter(resourcetype = "Exam") | Resource.objects.filter(major__icontains=major).filter(resourcetype = "Exam")
     temp = get_template('main/searchresults.html')
