@@ -432,6 +432,11 @@ p, ul, li, div, nav {
 }
 
 /* upload form */
+@media (max-width: 500px) {
+    #uploadform tr td {
+        display: block;
+    }
+}
 
 #uploadform {
     padding: 30px 0;
