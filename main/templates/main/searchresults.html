@@ -99,7 +99,22 @@
                 <tbody>
                     {% for res in courses%}
                     <tr onclick="window.document.location='{% url 'course' pk=res.pk%}'">
-                        <td scope="row">{{res.major}}</td>
+                        <td scope="row">
+                          {% if res.major == 'bachelorcollege' %}Bachelor College{% endif %}
+                          {% if res.major == 'appliedmathematics' %}Applied Mathematics{% endif %}
+                          {% if res.major == 'appliedphysics' %}Applied Physics{% endif %}
+                          {% if res.major == 'architecture' %}Architecture, Urbanism and Building Sciences{% endif %}
+                          {% if res.major == 'automotive' %}Automotive{% endif %}
+                          {% if res.major == 'biomedicalengineering' %}Biomedical Engineering{% endif %}
+                          {% if res.major == 'chemicalengineering' %}Chemical Engineering{% endif %}
+                          {% if res.major == 'computerscience' %}Computer Science{% endif %}
+                          {% if res.major == 'electricalengineering' %}Electrical Engineering{% endif %}
+                          {% if res.major == 'industrialdesign' %}Industrial Design{% endif %}
+                          {% if res.major == 'industrialengineering' %}Industrial Engineering{% endif %}
+                          {% if res.major == 'mechanicalengineering' %}Mechanical Engineering{% endif %}
+                          {% if res.major == 'psychologyandtechnology' %}Psychology and Technology{% endif %}
+                          {% if res.major == 'sustainableinnovation' %}Sustainable Innovation{% endif %}
+                        </td>
                         <td>{{res.name}}</td>
                         <td>{{res.course_id}}</td>
                     </tr>

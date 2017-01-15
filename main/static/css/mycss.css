@@ -55,17 +55,18 @@ a.navbar-brand {
     }
 }
 
-.hoverTable td {
+.hoverTable. td {
     padding: 7px;
 }
 
-.hoverTable tr:hover {
+.hoverTable tbody>tr:hover {
     background-color: #ffff99;
 }
 
-.hoverTable tr:focus {
+.hoverTable tbody>tr:focus {
     background-color: #ffff99;
 }
+
 
 /* fix for placeholder adjusting length placeholder text searchbox home page */
 
@@ -182,6 +183,11 @@ input.phone {
 #searchbarform input[type=checkbox] {
     margin: 0 3px 0 0;
     vertical-align: middle;
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+    text-decoration: underline;
+    font-weight: 800;
 }
 
 @media only screen and (orientation: portrait) {
@@ -365,7 +371,6 @@ h3 {
     background-size: cover;
     background-position: center;
 }
-
 .coursecon {
     text-align: center;
 }
