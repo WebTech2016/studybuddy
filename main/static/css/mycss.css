@@ -35,6 +35,10 @@ body {
     margin-bottom: 55px;
 }
 
+.hoverTable > thead > tr {
+  background-color: #f9f9f9;
+}
+
 html, body {
     overflow-x: hidden;
     overflow-y: auto;
@@ -55,7 +59,7 @@ a.navbar-brand {
     }
 }
 
-.hoverTable. td {
+.hoverTable td {
     padding: 7px;
 }
 
