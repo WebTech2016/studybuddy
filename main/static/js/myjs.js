@@ -13,6 +13,14 @@ $(function() {
 
     //login menu
     $("#loginlink").click(function(e) {
+        //close when clicking outside
+        $(window).on('click.menu', function(ee) {
+             if( $(ee.target).closest('#loginlink').length === 0 && $(ee.target).closest('#loginmenu').length === 0 ) {
+                 $("#loginmenu").removeClass('active');
+                 $(window).off('click.menu');
+             }
+        });
+
         //disable link click
         e.preventDefault();
         //show menu
@@ -22,6 +30,14 @@ $(function() {
 
     //register menu
     $("#reglink").click(function(e) {
+        //close when clicking outside
+        $(window).on('click.menu', function(ee) {
+             if( $(ee.target).closest('#reglink').length === 0 && $(ee.target).closest('#regmenu').length === 0 ) {
+                 $("#regmenu").removeClass('active');
+                 $(window).off('click.menu');
+             }
+        });
+
         //disable link click
         e.preventDefault();
         //show menu
