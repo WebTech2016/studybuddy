@@ -84,26 +84,24 @@
 
     <div class="container">
 
-        {% if results %}
+        {% if courses or exams or summaries %}
         {% if courses %}
         <div class="row">
             <h2 style="font-family: 'Comfortaa-Bold';">Courses</h2>
             <table class="table hoverTable">
                 <thead>
                     <tr>
-                        <th>Type</th>
-                        <th>Title</th>
-                        <th>Uploaded By</th>
-                        <th>File</th>
+                        <th>Major</th>
+                        <th>Course</th>
+                        <th>Course ID</th>
                     </tr>
                 </thead>
                 <tbody>
                     {% for res in courses%}
-                    <tr onclick="window.document.location='{{res.resourcefile.url}}'">
-                        <td scope="row">{{res.resourcetype}}</td>
-                        <td>{{res.title}}</td>
-                        <td>{{res.uploadedBy}}</td>
-                        <td><a href="{{res.resourcefile.url}}">{{res.resourcefile}}</a></td>
+                    <tr onclick="window.document.location='{% url 'course' pk=res.pk%}'">
+                        <td scope="row">{{res.major}}</td>
+                        <td>{{res.name}}</td>
+                        <td>{{res.course_id}}</td>
                     </tr>
                     {% endfor %}
                 </tbody>
@@ -134,7 +132,8 @@
                 </tbody>
             </table>
         </div>
-        {% endif %} {% if summaries %}
+        {% endif %}
+        {% if summaries %}
         <div class="row">
             <h2 style="font-family: 'Comfortaa-Bold';">Summaries</h2>
             <table class="table hoverTable">
@@ -158,7 +157,8 @@
                 </tbody>
             </table>
         </div>
-        {% endif %} {% else %}
+        {% endif %}
+        {% else %}
         <div class="row">
             <h4>Nothing found for "{{query}}". Please try again. </h4>
             <a href="{% url 'upload' %}"><h4> Still nothing? Upload your resources now and contribute to StudyBuddy!</h4></a>
@@ -166,7 +166,6 @@
                 <h4> Not registred yet? Register now and start contributing to the evergrowing StudyBuddy database</h4>
             </a>
         </div>
-
         {% endif %}
     </div>
 

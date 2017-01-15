@@ -141,10 +141,10 @@ def search(request):
         form = UserForm()
 
     query = request.GET['q']
-    results = Resource.objects.filter(title__contains=query)
-    courses = Course.objects.filter(name__contains=query)
-    summaries = Resource.objects.filter(title__contains=query).filter(resourcetype = "Summary")
-    exams = Resource.objects.filter(title__contains=query).filter(resourcetype = "Exam")
+    results = Resource.objects.filter(title__icontains=query)
+    courses = Course.objects.filter(name__icontains=query)
+    summaries = Resource.objects.filter(title__icontains=query).filter(resourcetype = "Summary")
+    exams = Resource.objects.filter(title__icontains=query).filter(resourcetype = "Exam")
     temp = get_template('main/searchresults.html')
     context = Context({'results': results, 'query': query})
     return render(request, 'main/searchresults.html', {'courses': courses, 'summaries': summaries, 'results': results, 'exams': exams, 'query': query} )
